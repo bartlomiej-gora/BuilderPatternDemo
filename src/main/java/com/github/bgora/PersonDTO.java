@@ -1,5 +1,7 @@
 package com.github.bgora;
 
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
 /**
@@ -10,6 +12,8 @@ import java.util.Set;
  */
 public class PersonDTO {
 
+    @Size(max = 11, min = 11)
+    @Pattern(regexp = "[\\d]{11}")
     private final String pesel;
     private final String firstName;
     private final String lastName;
