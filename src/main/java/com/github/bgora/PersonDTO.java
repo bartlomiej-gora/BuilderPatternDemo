@@ -13,8 +13,8 @@ public class PersonDTO {
     private final String pesel;
     private final String firstName;
     private final String lastName;
-    private String secondName;
 
+    private String secondName;
     private String thirdName;
     private Set<PersonDTO> siblings;
     private Set<PersonDTO> kids;
