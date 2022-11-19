@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.Optional;
 
 /**
- * PersonDTO
+ * Person
  * Class to send Person data over network
  * Required fields are birthDate, First Name, Last Name
  * TODO: Refactor this class to use Builder Pattern
