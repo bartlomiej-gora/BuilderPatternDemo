@@ -17,7 +17,7 @@ class PersonTest {
     final Address givenAddress = new Address("44-110", "Gliwice", "Zwycięstwa", "1", "1");
 
     @Test
-    public void test1() {
+    public void testPersonWithNameAndSurname() {
         var person = new Person(LocalDate.now(), givenName, givenLastName);
         assertThat(person).isNotNull();
         assertThat(person.getFirstName()).isEqualTo(givenName);
@@ -26,7 +26,7 @@ class PersonTest {
 
 
     @Test
-    public void test2() {
+    public void testPersonWithNameSurnameAndPesel() {
         var person = new Person(LocalDate.now(), givenName, givenLastName, givenPesel);
         assertThat(person).isNotNull();
         assertThat(person.getFirstName()).isEqualTo(givenName);
@@ -35,7 +35,7 @@ class PersonTest {
     }
 
     @Test
-    public void test3() {
+    public void testPersonWithNameSurnameAndPeselAndSecondName() {
         var person = new Person(LocalDate.now(), givenName, givenLastName, givenPesel, givenSecondName);
         assertThat(person).isNotNull();
         assertThat(person.getFirstName()).isEqualTo(givenName);
@@ -45,7 +45,7 @@ class PersonTest {
     }
 
     @Test
-    public void test3WithoutPesel() {
+    public void testPersonWithNameSurnameAndNoPeselAndSecondName() {
         var person = new Person(LocalDate.now(), givenName, givenLastName, null, givenSecondName);
         assertThat(person).isNotNull();
         assertThat(person.getFirstName()).isEqualTo(givenName);
@@ -55,7 +55,7 @@ class PersonTest {
     }
 
     @Test
-    public void test4() {
+    public void testPersonWithNameSurnameAndPeselAndSecondNameAndThirdName() {
         var person = new Person(LocalDate.now(), givenName, givenLastName, givenPesel, givenSecondName, givenThirdName);
         assertThat(person).isNotNull();
         assertThat(person.getFirstName()).isEqualTo(givenName);
@@ -66,7 +66,7 @@ class PersonTest {
     }
 
     @Test
-    public void test4WithoutSecondName() {
+    public void testPersonWithNameSurnameAndPeselAndNoSecondNameAndThirdName() {
         var person = new Person(LocalDate.now(), givenName, givenLastName, givenPesel, null, givenThirdName);
         assertThat(person).isNotNull();
         assertThat(person.getFirstName()).isEqualTo(givenName);
@@ -78,7 +78,7 @@ class PersonTest {
 
 
     @Test
-    public void test4WithouPeselAndSecondName() {
+    public void testPersonWithNameSurnameAndNoPeselAndNoSecondNameAndThirdName() {
         var person = new Person(LocalDate.now(), givenName, givenLastName, null, null, givenThirdName);
         assertThat(person).isNotNull();
         assertThat(person.getFirstName()).isEqualTo(givenName);
@@ -89,7 +89,7 @@ class PersonTest {
     }
 
     @Test
-    public void test5() {
+    public void testPersonWithNameSurnameAndPeselAndSecondNameAndThirdNameAndAddress() {
         var person = new Person(LocalDate.now(), givenName, givenLastName, givenPesel, givenSecondName, givenThirdName, givenAddress);
         assertThat(person).isNotNull();
         assertThat(person.getFirstName()).isEqualTo(givenName);
@@ -101,7 +101,7 @@ class PersonTest {
     }
 
     @Test
-    public void test5withoutPesel() {
+    public void testPersonWithNameSurnameAndNoPeselAndSecondNameAndThirdNameAndAddress() {
         var person = new Person(LocalDate.now(), givenName, givenLastName, null, givenSecondName, givenThirdName, givenAddress);
         assertThat(person).isNotNull();
         assertThat(person.getFirstName()).isEqualTo(givenName);
@@ -113,7 +113,7 @@ class PersonTest {
     }
 
     @Test
-    public void test5withoutPeselAndThirdName() {
+    public void testPersonWithNameSurnameAndNoPeselAndSecondNameAndNoThirdNameAndAddress() {
         var person = new Person(LocalDate.now(), givenName, givenLastName, null, givenSecondName, null, givenAddress);
         assertThat(person).isNotNull();
         assertThat(person.getFirstName()).isEqualTo(givenName);
