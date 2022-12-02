@@ -1,7 +1,5 @@
 package com.github.bgora;
 
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 import java.time.LocalDate;
 import java.util.Optional;
 
@@ -13,13 +11,10 @@ import java.util.Optional;
  */
 public class Person {
 
-
     private final LocalDate birthDate;
     private final String firstName;
     private final String lastName;
 
-    @Size(max = 11, min = 11)
-    @Pattern(regexp = "[\\d]{11}")
     private String pesel;
     private String secondName;
     private String thirdName;
@@ -38,7 +33,11 @@ public class Person {
         this.pesel = pesel;
     }
 
-    public Person(final LocalDate birthDate, final String firstName, final String lastName, final String pesel, final String secondName) {
+    public Person(final LocalDate birthDate,
+                  final String firstName,
+                  final String lastName,
+                  final String pesel,
+                  final String secondName) {
         this.birthDate = birthDate;
         this.firstName = firstName;
         this.lastName = lastName;
